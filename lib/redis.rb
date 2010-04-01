@@ -16,8 +16,8 @@ rescue LoadError
   RedisRb::RedisTimer = nil
 end
 
-require 'redis/client'
-require 'redis/pipeline'
+require File.dirname(__FILE__) + '/redis/client'
+require File.dirname(__FILE__) + '/redis/pipeline'
 
 # For backwards compatibility
 Redis = RedisRb::Client
